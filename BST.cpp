@@ -45,6 +45,11 @@ BST::BST(const BST& treeToCopy){
 
 BST& BST::operator=(const BST& treeToCopy){
     //TODO (consider calling the same recursive functons used in destructor and copy constructor)
+    if(this!=&treeToCopy){
+        root=::copy_helper( treeToCopy.root);
+    }
+    return *this;
+
 }
 
 BST::~BST(){

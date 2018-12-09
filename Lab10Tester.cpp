@@ -152,9 +152,10 @@ int main(){
     testCopyConstructor(nullptr, 0);
     std::cout<<"Done \n";
 
-//    testAssnOp(v1, v1Size);
-//    testAssnOp(one, 1);
-//    testAssnOp(nullptr, 0);
+    testAssnOp(v1, v1Size);
+    testAssnOp(one, 1);
+    testAssnOp(nullptr, 0);
+    std::cout<<"Done \n";
 
     return 0;
 }
