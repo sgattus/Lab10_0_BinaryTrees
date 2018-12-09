@@ -150,10 +150,11 @@ int main(){
     int one[] = {1};
     testCopyConstructor(one, 1);
     testCopyConstructor(nullptr, 0);
+    std::cout<<"Done \n";
 
-    testAssnOp(v1, v1Size);
-    testAssnOp(one, 1);
-    testAssnOp(nullptr, 0);
+//    testAssnOp(v1, v1Size);
+//    testAssnOp(one, 1);
+//    testAssnOp(nullptr, 0);
 
     return 0;
 }

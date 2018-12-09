@@ -21,9 +21,26 @@ void deleteSubTree(BTNode* current){
     }
 }
 
+BTNode* copy_helper( BTNode* copy_from)
+{
+    if(copy_from == nullptr){
+        return nullptr;
+    } else{
+        BTNode* copy_to= new BTNode(copy_from->getItem());
+        copy_to->setLeft(copy_helper(copy_from->getLeft()));
+        copy_to->setRight(copy_helper(copy_from->getRight()));
+        return copy_to;
+
+    }
+}
+
 BST::BST(const BST& treeToCopy){
     //TODO (consider calling a recursive function that takes a current node,
     //and returns a copy of that node and everything below it)
+    root=::copy_helper( treeToCopy.root);
+
+
+
 }
 
 BST& BST::operator=(const BST& treeToCopy){
