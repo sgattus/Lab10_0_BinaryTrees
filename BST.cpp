@@ -120,10 +120,6 @@ void printInOrder(BTNode* current){
 
 
         }
-
-
-
-
     }
     else{
         std::cout<<"The tree is empty\n";
