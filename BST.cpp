@@ -23,7 +23,7 @@ void deleteSubTree(BTNode* current){
     }
 }
 
-// O(n)
+// O(n) for copy constructor and assignment opp
 BTNode* copy_helper( BTNode* copy_from)
 {
     if(copy_from == nullptr){
@@ -59,7 +59,7 @@ BST::~BST(){
     deleteSubTree(root);
 }
 
-//O (logN)
+//O(h) ; best case senario: O (logN)
 void add(BTNode* current,  int newValue){
     if (newValue == current->getItem()){
         throw DuplicateValueException();
@@ -160,7 +160,7 @@ int BST::itemCount(){
     }
 }
 
-//O(log N)
+//O(h) ; best case senario: O (logN)
 int height(BTNode* current){
     if(current== nullptr){
         return 0;
