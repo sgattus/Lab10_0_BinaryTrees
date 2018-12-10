@@ -9,10 +9,12 @@
 #include <iostream>
 #include "BST.h"
 
+//Big O(1)
 BST::BST(){
     root = nullptr;
 }
 
+//Big O(N)
 void deleteSubTree(BTNode* current){
     if (current != nullptr) {
         deleteSubTree(current->getLeft());
@@ -21,6 +23,7 @@ void deleteSubTree(BTNode* current){
     }
 }
 
+// O(n)
 BTNode* copy_helper( BTNode* copy_from)
 {
     if(copy_from == nullptr){
@@ -56,6 +59,7 @@ BST::~BST(){
     deleteSubTree(root);
 }
 
+//O (logN)
 void add(BTNode* current,  int newValue){
     if (newValue == current->getItem()){
         throw DuplicateValueException();
@@ -89,6 +93,8 @@ void BST::add(int newValue){
     }
 }
 
+
+//O(n)
 bool find(BTNode *current, int itemToFind) {
     if (current == nullptr){
         return false;
@@ -108,6 +114,7 @@ bool BST::find(int itemToFind) {
     return ::find(root, itemToFind);
 }
 
+//O(n)
 void printInOrder(BTNode* current){
     if(current != nullptr){
         if(current->getLeft()!= nullptr){
@@ -132,6 +139,7 @@ void BST::printInOrder(){
     std::cout<<"\n";
 }
 
+//O(n)
 int itemCount(BTNode* current){
     int count = 1;
     if (current->getLeft() != nullptr) {
@@ -152,8 +160,8 @@ int BST::itemCount(){
     }
 }
 
+//O(log N)
 int height(BTNode* current){
-    //TODO
     if(current== nullptr){
         return 0;
     }
@@ -173,6 +181,7 @@ int BST::height(){
     return ::height(root)-1;
 }
 
+//O(n)
 int max(BTNode* current){
 
 
