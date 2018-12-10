@@ -123,10 +123,10 @@ int main(){
     printAssertEquals(0, t6.itemCount());
 
     std::cout << "\nTesting Height:" << std::endl;
-    printAssertEquals(-100, t1.height());
-    printAssertEquals(-100, t2.height());
-    printAssertEquals(-100, t3.height());
-    printAssertEquals(-100, t4.height());
+    printAssertEquals(3, t1.height());
+    printAssertEquals(3, t2.height());
+    printAssertEquals(4, t3.height());
+    printAssertEquals(3, t4.height());
     printAssertEquals(0, t5.height());
     printAssertEquals(-1, t6.height());
 

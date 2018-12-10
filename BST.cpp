@@ -154,11 +154,23 @@ int BST::itemCount(){
 
 int height(BTNode* current){
     //TODO
-    return -100;
+    if(current== nullptr){
+        return 0;
+    }
+    else {
+        int lSide = height(current->getLeft());
+        int rSide = height(current->getRight());
+
+        if (rSide > lSide) {
+            return rSide + 1;
+        } else {
+            return lSide + 1;
+        }
+    }
 }
 
 int BST::height(){
-    return ::height(root);
+    return ::height(root)-1;
 }
 
 int max(BTNode* current){
