@@ -1,10 +1,7 @@
 //
 //  BST.cpp
 //  TreeProject
-//
-//  Created by Toby Dragon on 11/13/14.
-//  Copyright (c) 2014 Toby Dragon. All rights reserved.
-//
+
 
 #include <iostream>
 #include "BST.h"
@@ -38,9 +35,9 @@ BTNode* copy_helper( BTNode* copy_from)
 }
 
 BST::BST(const BST& treeToCopy){
-    //TODO (consider calling a recursive function that takes a current node,
-    //and returns a copy of that node and everything below it)
+
     root=::copy_helper( treeToCopy.root);
+
 
 
 
@@ -48,6 +45,8 @@ BST::BST(const BST& treeToCopy){
 
 BST& BST::operator=(const BST& treeToCopy){
     //TODO (consider calling the same recursive functons used in destructor and copy constructor)
+
+
     if(this!=&treeToCopy){
         root=::copy_helper( treeToCopy.root);
     }
@@ -94,7 +93,7 @@ void BST::add(int newValue){
 }
 
 
-//O(n)
+//O(log n)
 bool find(BTNode *current, int itemToFind) {
     if (current == nullptr){
         return false;
@@ -160,7 +159,7 @@ int BST::itemCount(){
     }
 }
 
-//O(h) ; best case senario: O (logN)
+//O(n)
 int height(BTNode* current){
     if(current== nullptr){
         return 0;
@@ -181,7 +180,7 @@ int BST::height(){
     return ::height(root)-1;
 }
 
-//O(n)
+//O(h) Best Case senario O(log n)
 int max(BTNode* current){
 
 
